@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#This is a script to add new users to the server
+FILE=/etc/passwd
+
+echo  "Hello. Please enter your name"
+read name
+echo "Thank you $name"
+echo "Checking /etc/passwd for existing user with that name"
+echo "..........................................................."
+
+if cat "$FILE" | grep -q "$name"; then  
+	echo "Sorry but that username is already taken"
+
+else useradd -m $name
+	echo "Welcome $name!"
+
+fi
