@@ -13,6 +13,7 @@ if cat "$FILE" | grep -q "$name"; then
 	echo "Sorry but that username is already taken"
 
 else useradd -m $name
+	passwd $name
 	echo "Welcome $name!"
 
 fi
