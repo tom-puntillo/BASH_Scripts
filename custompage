@@ -1,0 +1,7 @@
+#bin/bash
+
+# This is a script to install an Apache Web Server with a custom HTML page.
+
+sudo yum install httpd -y
+echo "Welcome Level Up In Tech! Blue Team Rocks!" > /usr/share/httpd/noindex/index.html
+sudo systemctl start httpd
