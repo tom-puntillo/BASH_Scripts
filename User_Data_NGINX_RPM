@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#This script is the user-data file to install and launch NGINX
+
+sudo yum update -y
+sudo yum upgrade -y
+sudo yum install nginx -y
+sudo systemctl nginx start
+suu systemctl nginx enable
+
