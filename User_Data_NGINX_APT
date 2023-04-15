@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#This script is the user-data file to install and launch NGINX
+
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install nginx -y
+sudo systemctl nginx start
+suu systemctl nginx enable
+
