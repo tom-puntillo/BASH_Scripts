@@ -1,0 +1,9 @@
+#/bin/bash
+
+#This script will update the OS and install and enable apache
+
+sudo yum update -y
+sudo yum upgrade -y
+sudo yum install httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
