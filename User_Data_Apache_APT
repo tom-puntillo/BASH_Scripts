@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#This script is the user-data file to install and launch NGINX
+
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install httpd -y
+sudo systemctl httpd start
+sudo systemctl httpd enable
