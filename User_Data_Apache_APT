@@ -3,7 +3,7 @@
 #This script is the user-data file to install and launch NGINX
 
 sudo apt update -y
+sudo sleep 10
 sudo apt upgrade -y
-sudo apt install -y apache2
 sudo systemctl start apache2
 sudo systemctl enable apache2
