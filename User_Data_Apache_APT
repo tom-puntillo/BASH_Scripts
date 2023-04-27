@@ -4,6 +4,6 @@
 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install httpd -y
-sudo systemctl httpd start
-sudo systemctl httpd enable
+sudo apt install apache2 -y
+sudo systemctl apache2 start
+sudo systemctl apache2 enable
