@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#This is a script to move files between directories
+
+echo "Pick a directory:"
+read user_directory
+if [ -d "$user_directory" ]; then
+	ls -la
+
+else
+	mkdir -p "$user_directory"/backups
+
+fi
+
+echo "Pick a file type:"
+read file_type
+mv "$user_directory"/*."$file_type" "$user_directory"/backups
+ls -la "$user_directory"/backups
