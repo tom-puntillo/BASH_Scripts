@@ -1,0 +1,40 @@
+#!/bin/bash
+
+sudo yum update -y
+sudo yum upgrade -y
+sudo yum install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 100px 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Thomas Puntillo&apos;s NGINX Landing Page!</h1>
+        <p>Where all your Cloud Engineering dreams come true!.</p>
+    </div>
+</body>
+</html>' | sudo tee /var/www/html/index.html
+
